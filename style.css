@@ -3,10 +3,6 @@
     --color-primary-lightest: #e7c7b8;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -112,6 +108,11 @@ p {
     font-size: 16px;
 }
 
+.portfolio__card img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .contact-invite {
     font-size: 18px;
 }
@@ -178,6 +179,10 @@ a:hover {
     -moz-background-size: auto!important;
     -o-background-size: auto!important;
     background-size: auto!important;
+}
+
+.bg-banniere {
+    background-size: cover !important;
 }
 
 .bg-repeat {
@@ -776,31 +781,34 @@ a[data-lightbox]:hover img {
     text-align: center;
     font-weight: lighter;
     max-width: 520px;
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 .tight-width-whitespace {
     max-width: 600px;
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 .cta-hero {
     margin-top: 22px;
     color: #FFFFFF!important;
     text-transform: uppercase;
-    padding: 12px 28px 12px 28px;
+    padding: 12px 28px;
     font-size: 16px;
     font-weight: 700;
 }
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .med-width-whitespace {
     max-width: 800px;
-    margin: auto auto auto auto;
+    margin: auto;
     box-shadow: 0px 0px 0px #000000;
 }
 
@@ -828,7 +836,7 @@ a[data-lightbox]:hover img {
 
 .black-background {
     background-color: rgba(116, 103, 69, 0.7);
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
 }
 
 .bold-link {
@@ -922,13 +930,13 @@ a[data-lightbox]:hover img {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -947,8 +955,8 @@ a[data-lightbox]:hover img {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -958,8 +966,8 @@ a[data-lightbox]:hover img {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: var(--safe-area-inset-left);
+        padding-right: var(--safe-area-inset-right);
     }
 }
 
@@ -1099,6 +1107,18 @@ a[data-lightbox]:hover img {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+    .black-background {
+        padding: 40px 10px;
+    }
+    .portfolio-row {
+        margin: 0 auto;
+    }
+    .portfolio__card {
+        margin-bottom: 60px;
+    }
+    .contact-form {
+        margin-bottom: 30px;
     }
 }
 
