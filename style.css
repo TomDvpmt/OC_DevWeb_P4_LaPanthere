@@ -3,11 +3,6 @@
     --color-primary-lightest: #e7c7b8;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px;
-}
-
 body {
     margin: 0;
     padding: 0;
